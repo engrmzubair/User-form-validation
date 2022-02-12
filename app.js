@@ -10,6 +10,7 @@ email.addEventListener('blur', validateEmail);
 phone.addEventListener('blur', validatePhone);
 
 function validateName(e) {
+
   const re = /^[a-zA-Z]{2,10}$/;
 
   if (!re.test(nameI.value))
@@ -17,10 +18,16 @@ function validateName(e) {
   else
     nameI.classList.add('is-valid');
 
-
 }
 
 function validateZip() {
+
+  const re = /^[0-9]{5}$/;
+
+  if (!re.test(zip.value))
+    zip.classList.add('is-invalid');
+  else
+    zip.classList.add('is-valid');
 
 
 }
