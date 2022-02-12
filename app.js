@@ -42,6 +42,11 @@ function validateEmail() {
 }
 
 function validatePhone() {
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
 
+  if (!re.test(phone.value))
+    phone.classList.add('is-invalid');
+  else
+    phone.classList.add('is-valid');
 
 }
